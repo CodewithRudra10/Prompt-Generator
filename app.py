@@ -9,11 +9,25 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 st.title("NexaAI 🚀")
 st.subheader("Turn your ideas into perfect AI prompts")
 
+mode = st.selectbox(
+    "Choose Mode",
+    ["Generate Prompt", "Generate Content"]
+)
+
 # 🔹 Goal selection
+if mode == "Generate Prompt"
 goal = st.selectbox(
     "What do you want to do?",
     ["Explain", "Summarize", "Create Notes for", "Solve"]
 )
+
+    subject = st.text_input("Enter Subject")
+    topic = st.text_input("Enter Topic")
+    style = st.text_input("Enter Style (Simple, Detailed, etc.)")
+
+    use_ai = st.checkbox("Enhance with AI")
+
+    if st.button("Generate Prompt"):
 
 # 🔹 Inputs
 subject = st.text_input("Enter Subject")
@@ -42,7 +56,7 @@ def enhance_prompt(prompt):
         return response.choices[0].message.content
     except Exception as e:
         return f"⚠️ Error: {e}"
-
+    
 # 🔹 Generate button
 if st.button("Generate Prompt"):
 
