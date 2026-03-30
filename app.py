@@ -2,7 +2,7 @@ import streamlit as st
 
 # 🔹 Title
 st.title("NexaAI 🚀")
-st.subheader("Generate clear and effective AI prompts for your studies")
+st.subheader("Helps Students Generate better AI prompts for Studies")
 
 # 🔹 Goal selection
 goal = st.selectbox(
