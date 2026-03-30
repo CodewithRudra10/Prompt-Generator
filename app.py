@@ -16,7 +16,7 @@ mode = st.selectbox(
 
 # 🔹 Goal selection
 if mode == "Generate Prompt":
-goal = st.selectbox(
+        goal = st.selectbox(
     "What do you want to do?",
     ["Explain", "Summarize", "Create Notes for", "Solve"]
 )
